@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Link from "next/link";
-import { IoHomeOutline } from "react-icons/io5";
-import { CiSearch } from "react-icons/ci";
-import { MdOutlineExplore } from "react-icons/md";
-import { FaRegUser } from "react-icons/fa";
-import { IoIosAddCircleOutline } from "react-icons/io";
-import { Button } from "@/components/ui/button";
+import "@uploadthing/react/styles.css";
+import Pathname from "@/components/content/PathName";
+import Navbar from "@/components/frangment/navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,36 +32,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex">
-          <nav className="w-80 h-[100vh] border lg:block hidden px-5 pt-7 border-r-slate-200 lg:fixed ">
-            <h1 className="text-2xl font-semibold">abdul book</h1>
-            <ul className="flex flex-col gap-8 mt-8">
-              <li>
-                <Link href={"/"} className="flex gap-1 text-xl hover:scale-105 transition-all items-center"><IoHomeOutline />
-                  home</Link>
-              </li>
-              <li >
-                <Link className="flex gap-1 text-xl hover:scale-105 transition-all items-center" href={"/search"}><CiSearch />
-                  seach</Link>
-              </li>
-              <li >
-                <Link className="flex gap-1 text-xl hover:scale-105 transition-all items-center" href={"/explore"}><MdOutlineExplore />
-explore</Link>
-              </li>
-              <li >
-                <Link className="flex gap-1 text-xl hover:scale-105 transition-all items-center" href={"/add"}> <IoIosAddCircleOutline />
-create</Link>
-              </li>
-              <li >
-                <Link className="flex gap-1 text-xl hover:scale-105 transition-all items-center" href={"/profile"}> <FaRegUser />
-profile</Link>
-              </li>
-            </ul>
-            <Button variant={"default"} className="absolute bottom-8 ">Login</Button>
-          </nav>
-          <div className="lg:ml-80">
-          {children}
+          <Navbar/>
+          <div className="lg:ml-80 ml-0">
+            {children}
           </div>
-
         </div>
       </body>
     </html>
