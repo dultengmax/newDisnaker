@@ -1,4 +1,5 @@
 import { DrawerDialogDemo } from "@/components/frangment/drawer/comment";
+import { Suspense } from "react";
 import { AiOutlineLike } from "react-icons/ai";
 import { FiSend } from "react-icons/fi";
 
@@ -28,7 +29,9 @@ export default function Home() {
           {/* nav-card */}
           <div className="flex gap-3 pl-3">
             <AiOutlineLike className="text-xl" />
+            <Suspense fallback={null}>
             <DrawerDialogDemo />
+            </Suspense>
             <FiSend className="text-xl" />
           </div>
 

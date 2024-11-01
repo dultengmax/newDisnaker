@@ -6,8 +6,8 @@ import { CiSearch } from "react-icons/ci";
 import { MdExplore, MdOutlineExplore } from "react-icons/md";
 import { FaRegUser, FaUser } from "react-icons/fa";
 import { IoIosAddCircleOutline } from "react-icons/io";
-import { Button } from "@/components/ui/button";
 import { usePathname } from 'next/navigation';
+import { FormLoginD } from './drawer/login';
 
 const Navbar = () => {
     const path = usePathname()
@@ -67,11 +67,9 @@ const Navbar = () => {
                         </Link>
                     </li>
                 </ul>
-                <Button variant={"default"} className="absolute bottom-8 ">
-                    <Link href="/auth/login">
-                    Login
-                    </Link>
-                    </Button>
+<div className=' absolute bottom-4'>
+<FormLoginD/>
+</div>
             </nav>
         </div>
     )

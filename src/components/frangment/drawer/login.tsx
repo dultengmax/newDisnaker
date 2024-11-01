@@ -11,47 +11,52 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { ButtonSubmit } from "../buttonSubmit/ButtonSubmit"
+import { FormregisterValidate } from "@/lib/action/action"
 
-export function AddArticle() {
+export function FormLoginD() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">tambah post</Button>
+        <Button variant="outline">login</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[725px]">
+      <DialogContent className="sm:max-w-[625px] h-[50vh]">
         <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
+          <DialogTitle>masukan akun</DialogTitle>
           <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
+            selamat datang,silahkan masukan akun terlebih dahulu
           </DialogDescription>
         </DialogHeader>
-        <form>
+        <form action={FormregisterValidate}>
         <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
+          <div className="flex flex-col items-start gap-4">
             <Label htmlFor="name" className="text-right">
-              image
+              email
             </Label>
             <Input
               id="name"
+              name="email"
               defaultValue="Pedro Duarte"
               className="col-span-3"
+              placeholder="isi email kamu"
             />
           </div>
-          <div className="grid grid-cols-4 items-center gap-4">
+          <div className="flex flex-col items-start gap-4">
             <Label htmlFor="username" className="text-right">
-              Username
+              password
             </Label>
             <Input
               id="username"
+              name="password"
               defaultValue="@peduarte"
               className="col-span-3"
             />
           </div>
         </div>
-        </form>
         <DialogFooter>
-          <Button type="submit">Save changes</Button>
+          <ButtonSubmit/>
         </DialogFooter>
+        </form>
       </DialogContent>
     </Dialog>
   )

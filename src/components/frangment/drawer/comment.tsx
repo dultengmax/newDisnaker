@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
@@ -22,7 +21,6 @@ import {
 } from "@/components/ui/drawer"
 import { useMediaQuery } from 'usehooks-ts'
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { FaRegCommentDots } from "react-icons/fa";
 
 export function DrawerDialogDemo() {
@@ -37,7 +35,7 @@ export function DrawerDialogDemo() {
                         <FaRegCommentDots className="text-xl" />
                     </button>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-[725px] h-[70vh]">
+                <DialogContent className="sm:max-w-[1025px] h-[70vh]">
                     <DialogHeader aria-hidden>
                         <DialogTitle>cover</DialogTitle>
                     </DialogHeader>
@@ -61,7 +59,7 @@ export function DrawerDialogDemo() {
                 <DrawerHeader className="text-left">
                     <DrawerTitle>Edit profile</DrawerTitle>
                     <DrawerDescription>
-                        Make changes to your profile here. Click save when you're done.
+                        Make changes to your profile here. Click save when you&apos;re done.
                     </DrawerDescription>
                 </DrawerHeader>
                 <ProfileForm className="px-4" />
@@ -77,13 +75,14 @@ export function DrawerDialogDemo() {
 
 function ProfileForm({ className }: React.ComponentProps<"form">) {
     return (
-        <form className={cn("grid items-start gap-4", className)}>
+        <form className={cn("grid items-start gap-4 border p-4 w-1/2", className)}>
             <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
-                <Input type="email" id="email" defaultValue="shadcn@example.com" />
+                <h1>lkjdfhkldshfkldhfds</h1>
+                <h1>lkjdfhkldshfkldhfds</h1>
+                <h1>lkjdfhkldshfkldhfds</h1>
+                <h1>lkjdfhkldshfkldhfds</h1>
             </div>
             <div className="grid gap-2">
-                <Label htmlFor="username">Username</Label>
                 <Input id="username" defaultValue="@shadcn" />
             </div>
             <Button type="submit">Save changes</Button>
