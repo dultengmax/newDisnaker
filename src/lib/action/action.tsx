@@ -91,3 +91,11 @@ export const FindPost = async (judul:any)=>{
 
 
 
+export const SendComment = async (send:string)=>{
+  
+  try{
+
+  }catch(error){
+    console.log(error)
+  }
+}
