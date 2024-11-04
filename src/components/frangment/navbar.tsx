@@ -13,7 +13,7 @@ const Navbar = () => {
     const path = usePathname()
     return (
         <div>
-            <nav className="w-80 h-[100vh] border lg:block sm:hidden md:hidden px-5 pt-7 border-r-slate-200 lg:fixed ">
+            <nav className="w-80 h-[100vh] border lg:block xs:hidden 2xs:hidden sm:hidden md:hidden px-5 pt-7 border-r-slate-200 lg:fixed ">
                 <h1 className="text-2xl font-semibold">abdulbook</h1>
                 <ul className="flex flex-col gap-8 mt-8">
                     <li>
